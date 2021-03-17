@@ -58,19 +58,16 @@ model.compile(
   loss='mse',
   # optimizer='adam',
   # optimizer=Adam(lr=0.01),
-  optimizer=SGD(lr=0.08, momentum=0.9),
+  optimizer=SGD(learning_rate=0.08, momentum=0.9),
   metrics=['mse'],
 )
 
 r = model.fit(
-  x=[df_train.userId.values, df_train.movie_idx.values],
+  x=[df_train.user_idx.values, df_train.book_idx.values],
   y=df_train.rating.values - mu,
   epochs=epochs,
   batch_size=128,
-  validation_data=(
-    [df_test.userId.values, df_test.movie_idx.values],
-    df_test.rating.values - mu
-  )
+  validation_data=([df_test.user_idx.values, df_test.book_idx.values], df_test.rating.values - mu)
 )
 
 
