@@ -1,4 +1,30 @@
-# book recommender system
+# book recommender system project
+
+## Introduction 
+
+## Software 
+
+- Python 3.8.0
+- tensor flow 2.4.1
+- keras 2.4.3
+- scikit learn 0.24.1
+
+### Python Virtual Environment (Linux)
+
+To set up a python virtual evironment in linux terminal:
+
+`pip3 install virtualenv`
+ 
+`virtualenv -p python3.8 VirtEnv`
+
+This will place a folder called 'VirtEnv' in the home folder.
+To activate it:
+
+`source VirtEnv/bin/activate`
+
+To deactivate the evironment after using it:
+
+`deactivate`
 
 ## About the datasets
 
