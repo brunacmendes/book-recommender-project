@@ -30,7 +30,7 @@ df_test = df.iloc[cutoff:]
 # initialize variables
 K = 10 # latent dimensionality
 mu = df_train.rating.mean()
-epochs = 15
+epochs = 100
 # reg = 0.0001 # regularization penalty
 
 
@@ -59,7 +59,7 @@ model.compile(
   # optimizer='adam',
   # optimizer=Adam(lr=0.01),
   optimizer=SGD(learning_rate=0.08, momentum=0.9),
-  metrics=['mse'],
+  metrics=['mean_squared_error'],
 )
 
 r = model.fit(
