@@ -4,7 +4,7 @@
 
 ## Software 
 
-- Python 3.8.0
+- python 3.8.2
 - tensor flow 2.4.1
 - keras 2.4.3
 - scikit learn 0.24.1

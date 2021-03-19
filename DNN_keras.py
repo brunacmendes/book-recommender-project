@@ -16,9 +16,9 @@ from keras.optimizers import SGD, Adam
 # load in the data
 df = pd.read_csv('datasets/ratings.csv')
 
-N = df.user_idx.max()  # number of users
+N = df.user_idx.max() + 1 # number of users
 print(N)
-M = df.book_idx.max()  # number of books
+M = df.book_idx.max() + 1 # number of books
 print(M)
 
 # split into train and test

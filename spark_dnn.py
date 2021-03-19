@@ -14,7 +14,7 @@ from pyspark.mllib.recommendation import ALS, MatrixFactorizationModel, Rating
 import os
 
 # load in the data
-data = sc.textFile("/home/bruna/Área de trabalho/TCC atualizado (16-03-2021)/recommender_project/datasets/ratings_idx.csv")
+data = sc.textFile("/home/bruna/Documents/TCC atualizado (16-03-2021)/recommender_project/datasets/ratings_idx.csv")
 
 # filter out header
 header = data.first() #extract header
@@ -58,4 +58,4 @@ print("test mse: %s" % mse)
 
 #p = predictions
 
-p.saveAsTextFile("/home/bruna/Área de trabalho/TCC atualizado (16-03-2021)/recommender_project/output.txt")
+#p.saveAsTextFile("/home/bruna/Área de trabalho/TCC atualizado (16-03-2021)/recommender_project/output.txt")
